@@ -21,5 +21,7 @@ jobs:
               run: |
                   import platform
                   print(platform.processor())
+                  name= "Suraj"
+                  print(hello + name)
               #This informs git hub actions that we now want to run on a python shell instead of bash.
               shell: python 
