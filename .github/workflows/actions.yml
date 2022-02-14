@@ -1,0 +1,16 @@
+name: Actions workflows
+on: [push]
+
+jobs:
+  run-github-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Simple JavaScript Actions
+        id: greetName
+      #referencing public action from a user's repsitory, the @ is referencing the release version.
+        uses: actions/hello-world-javascript-action@v1.1
+        #actions can have input
+        with: 
+          who-to-greet: Suraj
+      - name: Time logged
+        run: echo "${{ steps.greetName.outputs.time }}"
