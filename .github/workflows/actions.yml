@@ -2,10 +2,10 @@ name: Actions workflows
 
 on:
 #a schedule is defined as an array
-  schedule:
+ # schedule:
   #check out crontab.guru.com to better understand the scheduling times that are possible
-    - cron: "0/5 * * * *"
-    - cron: "0/6 * * * *"
+  #  - cron: "0/5 * * * *"
+  # - cron: "0/6 * * * *"
 
   pull_request:
     types: [closed, assigned, opened, reopened]
