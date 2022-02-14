@@ -1,16 +1,26 @@
 name: Actions workflows
-on: [push]
+
+on:
+#a schedule is defined as an array
+  schedule:
+  #check out crontab.guru.com to better understand the scheduling times that are possible
+    - cron: "0/5 * * * *"
+    - cron: "0/6 * * * *"
+
+  pull_request:
+    types: [closed, assigned, opened, reopened]
 
 jobs:
   run-github-actions:
     runs-on: ubuntu-latest
     steps:
       - name: Simple JavaScript Actions
-        id: greetName
+        id: greetName #id is required to reference this step when outputing in the next step
       #referencing public action from a user's repsitory, the @ is referencing the release version.
         uses: actions/hello-world-javascript-action@v1.1
         #actions can have input
         with: 
           who-to-greet: Suraj
+          #output
       - name: Time logged
         run: echo "${{ steps.greetName.outputs.time }}"
