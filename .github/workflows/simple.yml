@@ -11,7 +11,7 @@ jobs:
         #steps is an array
         steps:
             - name: echo a string
-              run: echo "Hello Suraj"
+              run: ecgho "Hello Suraj"
             - name: multiline script
               run: |
                   node -v
