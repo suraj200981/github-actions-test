@@ -25,3 +25,11 @@ jobs:
                   print("hello" + name)
               #This informs git hub actions that we now want to run on a python shell instead of bash.
               shell: python 
+    run-windows-commands:
+      runs-on: windows-latest
+      steps:
+          - name: Directory PowerShell
+            run: Get-Location
+          - name: Folder Bash
+            run: pwd
+            shell: bash
