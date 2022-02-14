@@ -1,0 +1,17 @@
+# To convert this YAML data to JSON press ctrl + shift + p and serach YAML to JSON
+
+name : suraj
+age: 28
+address : Wilsthorpe road
+active : true
+key :
+    key1: value
+    key2: 84
+# The below is the same as the above. But it isnt as readable so you would typically use the above
+jsonObject : {key: value, key2: 48}
+
+# Array in YAML
+array:
+    - item1
+    - item2
+    - { key: value }

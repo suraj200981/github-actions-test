@@ -1,0 +1,18 @@
+#name of our entire workflow
+name: Shell Commands
+
+#on a push request
+on: [push]
+
+#defining the jobs
+jobs:
+    run-shell-command:
+        runs-on: ubuntu-latest
+        #steps is an array
+        steps:
+            - name: echo a string
+              run: echo "Hello Suraj"
+            - name: multiline script
+              run: |
+                  node -v
+                  npm -v
